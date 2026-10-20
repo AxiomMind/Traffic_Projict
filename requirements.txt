@@ -1,0 +1,17 @@
+torch>=2.0.0
+torch-geometric
+networkx>=3.0
+osmnx>=1.9.0
+pandas
+numpy
+scikit-learn
+scipy
+requests
+folium
+streamlit
+streamlit-folium
+pydeck
+plotly
+PyYAML
+tqdm
+pyarrow
