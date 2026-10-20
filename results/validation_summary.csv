@@ -1,0 +1,2 @@
+﻿city,n_nodes,spearman_pagerank,p_pagerank,spearman_betweenness,p_betweenness,spearman_degree,p_degree,jaccard_top20_pagerank,jaccard_top20_betweenness
+AVERAGE,93282.625,-0.2117,0.0596,0.1235,0.0,-0.3345,0.0,0.0951,0.2258

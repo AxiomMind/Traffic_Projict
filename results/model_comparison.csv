@@ -1,0 +1,9 @@
+﻿city,CityGraphTransformer,GATBaseline,GCNBaseline,best_model
+Beijing,0.032402,0.019452,0.018942,GCNBaseline
+Chengdu,0.041898,0.020776,0.020323,GCNBaseline
+Chongqing,0.041987,0.02437,0.020488,GCNBaseline
+Guangzhou,0.041419,0.021154,0.021291,GATBaseline
+Hangzhou,0.038494,0.019774,0.019932,GATBaseline
+Nanjing,0.046881,0.020922,0.021387,GATBaseline
+Tianjin,0.044849,0.021709,0.021321,GCNBaseline
+Wuhan,0.045075,0.024275,0.022034,GCNBaseline
