@@ -1,0 +1,74 @@
+# ============================================================
+# 城市交通韧性治理智能分析平台 · 全局配置
+# ------------------------------------------------------------
+# 说明：本文件原先缺失，现按代码中实际读取的键补全。
+#   paths / cities / localization 为必需项；
+#   model / train / web / validation 缺省时使用代码内置默认值，
+#   默认值已在文件末尾以注释形式列出，按需取消注释即可调参。
+# ============================================================
+
+paths:
+  raw_dir: data/raw                 # osmnx 下载的原始路网 graphml
+  processed_dir: data/processed     # 预处理后的 .pt 图数据
+  model_dir: weights                # 训练得到的模型权重
+  result_dir: results               # 逐城市节点风险结果 CSV
+  log_dir: logs                     # 运行日志
+  web_cache_dir: results/web_cache  # 看板使用的 parquet 缓存
+
+# 参与分析的城市（与 data/raw/{city}.graphml 一一对应）
+cities:
+  - Beijing
+  - Chengdu
+  - Chongqing
+  - Guangzhou
+  - Hangzhou
+  - Nanjing
+  - Tianjin
+  - Wuhan
+
+# 城市英文键 → 中文显示名（看板与日志展示用）
+localization:
+  Beijing: 北京
+  Chengdu: 成都
+  Chongqing: 重庆
+  Guangzhou: 广州
+  Hangzhou: 杭州
+  Nanjing: 南京
+  Tianjin: 天津
+  Wuhan: 武汉
+
+# ------------------------------------------------------------
+# 可选配置：以下为代码内置默认值，按需取消注释后覆盖
+# ------------------------------------------------------------
+# model:
+#   hidden_dim: 512
+#   heads: 8
+#   layers: 6
+#   dropout: 0.1
+#
+# train:
+#   seed: 42
+#   device: auto            # auto | cpu | cuda
+#   lr: 0.001
+#   epochs: 100
+#   weight_decay: 0.0
+#   ablation_epochs: 100    # 缺省时回落到 epochs
+#
+# web:
+#   heatmap_max_points: 10000
+#   top_n_points: 300
+#   node_max_points: 20000
+#   road_max_render_segments: 35000
+#   label_max_points: 120
+#   default_map_style: 标注底图
+#   default_zoom: 10.8
+#   default_pitch: 0
+#   default_bearing: 0
+#   default_page_size: 100
+#   default_city: ""
+#   high_risk_threshold: 85.0
+#   critical_risk_threshold: 90.0
+#   road_cache_max_segments: 180000
+#
+# validation:
+#   betweenness_k: 150
