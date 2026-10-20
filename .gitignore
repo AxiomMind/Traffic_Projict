@@ -1,0 +1,42 @@
+# ── 原始路网数据 ─────────────────────────────────────────────
+# 单城市 graphml 体积 30–170MB（Chongqing 169MB 已超过 GitHub 单文件 100MB 上限），
+# 全部 8 城市合计约 543MB，因此不入库；可用 python pipeline.py --only collect 重新下载。
+data/raw/*.graphml
+data/raw/*.osm
+data/raw/*.csv
+
+# ── 逐城市结果明细（每个 4–18MB，可由 train/infer 重新生成）──────
+# 仅保留 5 个汇总表（见下方白名单）
+results/*.csv
+!results/ablation_detail.csv
+!results/ablation_summary.csv
+!results/model_comparison.csv
+!results/validation_report.csv
+!results/validation_summary.csv
+
+# ── Web 看板缓存（parquet，可由 scripts/build_web_cache.py 重建）──
+results/web_cache/
+
+# ── 模型权重 ─────────────────────────────────────────────────
+weights/
+*.pth
+*.pt
+*.ckpt
+
+# ── 日志与 Python 缓存 ───────────────────────────────────────
+logs/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# ── 环境与编辑器 ─────────────────────────────────────────────
+.venv/
+venv/
+.env
+.idea/
+.vscode/
+
+# ── Office 临时锁文件 ────────────────────────────────────────
+~$*
